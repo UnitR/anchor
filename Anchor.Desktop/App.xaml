@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Desktop.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Background">#0B0F14</Color>
+            <Color x:Key="Surface">#141A22</Color>
+            <Color x:Key="Accent">#FF6A3D</Color>
+            <Color x:Key="OnSurface">#E8ECEF</Color>
+            <Color x:Key="Muted">#8A94A1</Color>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Surface}" />
+                <Setter Property="TextColor" Value="{StaticResource OnSurface}" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Padding" Value="16,10" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource OnSurface}" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

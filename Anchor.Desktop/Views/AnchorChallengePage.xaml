@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Desktop.Views.AnchorChallengePage"
+             BackgroundColor="#0B0F14">
+    <Grid Padding="48" RowDefinitions="*,Auto">
+        <VerticalStackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="18" MaximumWidthRequest="820">
+            <Label Text="Physical anchor challenge" FontSize="34" FontAttributes="Bold" />
+            <Label TextColor="{StaticResource Muted}"
+                   Text="To clear this overlay, take your phone and photograph the object below in its registered room." />
+            <Border Padding="24" StrokeThickness="0" BackgroundColor="{StaticResource Surface}">
+                <VerticalStackLayout Spacing="6">
+                    <Label x:Name="ObjectLabel" FontSize="44" FontAttributes="Bold" />
+                    <Label x:Name="RoomLabel" FontSize="22" TextColor="{StaticResource Accent}" />
+                </VerticalStackLayout>
+            </Border>
+            <Label x:Name="StatusLabel" FontSize="16" TextColor="{StaticResource Muted}"
+                   Text="Waiting for your phone…" />
+        </VerticalStackLayout>
+        <Button Grid.Row="1" Text="Emergency bypass (hold 10s)" Clicked="OnEmergency"
+                HorizontalOptions="End" BackgroundColor="Transparent" TextColor="{StaticResource Muted}" FontSize="12" />
+    </Grid>
+</ContentPage>

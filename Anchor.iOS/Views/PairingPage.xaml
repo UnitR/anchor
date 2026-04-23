@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.iOS.Views.PairingPage"
+             Title="Pair">
+    <VerticalStackLayout Padding="24" Spacing="12">
+        <Label Text="Enter 6-digit code shown on desktop" FontSize="20" />
+        <Entry x:Name="CodeEntry" Keyboard="Numeric" MaxLength="6" FontSize="28" HorizontalTextAlignment="Center" />
+        <Entry x:Name="HostEntry" Placeholder="desktop.local or 192.168.x.x" />
+        <Button Text="Pair" Clicked="OnPair" />
+        <Label x:Name="Status" TextColor="Gray" />
+    </VerticalStackLayout>
+</ContentPage>

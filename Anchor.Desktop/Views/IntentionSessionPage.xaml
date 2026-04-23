@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Desktop.Views.IntentionSessionPage"
+             Title="Start a session">
+    <ScrollView>
+        <VerticalStackLayout Padding="32" Spacing="16" MaximumWidthRequest="720" HorizontalOptions="Center">
+            <Label Text="Set today's intention" FontSize="28" FontAttributes="Bold" />
+            <Label TextColor="{StaticResource Muted}"
+                   Text="Research base: if-then implementation intentions (Gollwitzer 1999; Gawrilow &amp; Gollwitzer 2008, ADHD children)." />
+
+            <Label Text="Primary goal" Margin="0,12,0,0" />
+            <Entry x:Name="GoalEntry" Placeholder="e.g. Finish Q2 report draft" />
+
+            <Label Text="IF …" />
+            <Entry x:Name="IfEntry" Placeholder="e.g. it's 14:00 and I'm still on email" />
+
+            <Label Text="THEN I will …" />
+            <Entry x:Name="ThenEntry" Placeholder="e.g. switch to the report draft for 60 min" />
+
+            <Label Text="Session ends at" />
+            <TimePicker x:Name="EndTimePicker" />
+
+            <Button Text="Begin session" Clicked="OnBegin" Margin="0,16,0,0"
+                    BackgroundColor="{StaticResource Accent}" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Desktop.Views.InteroceptionPromptPage"
+             BackgroundColor="#0B0F14">
+    <Grid Padding="48">
+        <VerticalStackLayout Spacing="14" VerticalOptions="Center" HorizontalOptions="Center" MaximumWidthRequest="820">
+            <Label Text="Body check — 15 seconds" FontSize="34" FontAttributes="Bold" />
+            <Label TextColor="{StaticResource Muted}"
+                   Text="Hyperfocus suppresses interoceptive signals. Tap the closest honest answer. No defaults." />
+
+            <Label Text="Last water" FontSize="16" Margin="0,20,0,0"/>
+            <HorizontalStackLayout x:Name="WaterRow" Spacing="8" />
+
+            <Label Text="Last food" FontSize="16" Margin="0,8,0,0"/>
+            <HorizontalStackLayout x:Name="FoodRow" Spacing="8" />
+
+            <Label Text="Last bathroom" FontSize="16" Margin="0,8,0,0"/>
+            <HorizontalStackLayout x:Name="BathroomRow" Spacing="8" />
+
+            <Label Text="Last stood up" FontSize="16" Margin="0,8,0,0"/>
+            <HorizontalStackLayout x:Name="StoodRow" Spacing="8" />
+
+            <Button x:Name="ContinueBtn" Text="Continue" IsEnabled="False" Clicked="OnContinue" Margin="0,24,0,0"
+                    BackgroundColor="{StaticResource Accent}" TextColor="White" />
+            <Label TextColor="{StaticResource Muted}" FontSize="12"
+                   Text="Mahler (2019); Hupfeld et al. (2019)." />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

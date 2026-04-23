@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Desktop.Views.IntentionCheckpointPage"
+             BackgroundColor="#0B0F14">
+    <Grid Padding="48">
+        <VerticalStackLayout Spacing="16" VerticalOptions="Center" HorizontalOptions="Center" MaximumWidthRequest="820">
+            <Label Text="Intention check" FontSize="34" FontAttributes="Bold" />
+            <Label TextColor="{StaticResource Muted}"
+                   Text="Your stated priority for this session:" />
+            <Border Padding="20" StrokeThickness="0" BackgroundColor="{StaticResource Surface}">
+                <VerticalStackLayout Spacing="6">
+                    <Label x:Name="GoalLabel" FontSize="22" FontAttributes="Bold" />
+                    <Label x:Name="IfThenLabel" TextColor="{StaticResource Muted}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Where are you right now?" FontSize="18" Margin="0,12,0,0" />
+            <HorizontalStackLayout Spacing="12">
+                <Button Text="On track" Clicked="OnTrack" HorizontalOptions="FillAndExpand" />
+                <Button Text="Drifted" Clicked="OnDrifted" HorizontalOptions="FillAndExpand" />
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout x:Name="DriftedPanel" IsVisible="False" Spacing="10" Margin="0,14,0,0">
+                <Label Text="One-line reason:" />
+                <Entry x:Name="DriftReason" Placeholder="e.g. got pulled into Slack thread" />
+                <HorizontalStackLayout Spacing="12">
+                    <Button Text="Resume priority" Clicked="OnResume" HorizontalOptions="FillAndExpand"
+                            BackgroundColor="{StaticResource Accent}" TextColor="White" />
+                    <Button Text="Intentionally deferring" Clicked="OnDefer" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Label TextColor="{StaticResource Muted}" FontSize="12"
+                   Text="Gollwitzer (1999); Gawrilow &amp; Gollwitzer (2008)." />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

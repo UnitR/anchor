@@ -1,0 +1,43 @@
+# .NET build outputs
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.userprefs
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+# MAUI/iOS
+*.ipa
+*.xcarchive
+*.xcworkspace/xcuserdata/
+*.xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# xcframework (built locally — see Bridge/README.md)
+Anchor.iOS/Bridge/AnchorBridge.xcframework/
+
+# SQLite databases (runtime data)
+*.db
+*.db-shm
+*.db-wal
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rider / VS
+.idea/
+*.sln.DotSettings.user
