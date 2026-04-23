@@ -1,8 +1,11 @@
 #if WINDOWS
+using Anchor.Desktop.Platforms.Windows;
 using Anchor.Desktop.Services;
+using Microsoft.Maui.Platform;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
+using Window = Microsoft.UI.Xaml.Window;
 
 namespace Anchor.Desktop;
 

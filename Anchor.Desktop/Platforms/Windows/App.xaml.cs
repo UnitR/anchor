@@ -1,11 +1,11 @@
 #if WINDOWS
 using Microsoft.UI.Xaml;
+using Application = Microsoft.Maui.Controls.Application;
 
-namespace Anchor.Desktop.WinUI;
+namespace Anchor.Desktop;
 
-public partial class App : MauiWinUIApplication
+public partial class App
 {
-    public App() { InitializeComponent(); }
-    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+
 }
 #endif

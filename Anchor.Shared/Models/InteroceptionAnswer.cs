@@ -1,3 +1,4 @@
+using System;
 namespace Anchor.Shared.Models;
 
 public enum InteroceptionBand

@@ -36,4 +36,8 @@
       <SmartLink>True</SmartLink>
     </NativeReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20"/>
+  </ItemGroup>
 </Project>
