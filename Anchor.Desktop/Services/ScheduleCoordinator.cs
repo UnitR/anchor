@@ -2,7 +2,6 @@ using Anchor.Desktop.Views;
 using Anchor.Shared.Models;
 using Anchor.Shared.Scheduling;
 using Anchor.Shared.Storage;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Anchor.Desktop.Services;

@@ -1,6 +1,6 @@
 <Solution>
   <Project Path="Anchor.Desktop/Anchor.Desktop.csproj" />
-  <Project Path="Anchor.iOS/Anchor.iOS.csproj" />
+  <Project Path="Anchor.Mobile\Anchor.Mobile.csproj" />
   <Project Path="Anchor.Shared.Tests/Anchor.Shared.Tests.csproj" />
   <Project Path="Anchor.Shared/Anchor.Shared.csproj" />
 </Solution>

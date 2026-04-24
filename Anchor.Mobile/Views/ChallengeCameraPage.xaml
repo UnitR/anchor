@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Mobile.Views.ChallengeCameraPage"
+             Title="Anchor challenge">
+    <VerticalStackLayout Padding="24" Spacing="12">
+        <Label x:Name="PromptLabel" FontSize="24" FontAttributes="Bold" />
+        <Label Text="Photograph the object live — the app will not accept a saved photo." />
+        <Button Text="Take photo" Clicked="OnCapture" />
+        <Label x:Name="VerdictLabel" TextColor="Gray" />
+    </VerticalStackLayout>
+</ContentPage>

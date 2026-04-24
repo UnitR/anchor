@@ -37,7 +37,7 @@ public partial class AnchorChallengePage : ContentPage
 
     private async void OnEmergency(object? sender, EventArgs e)
     {
-        var ok = await DisplayAlert(
+        var ok = await DisplayAlertAsync(
             "Emergency bypass",
             "Only use this for genuine emergencies. A 60-second cooldown will begin; the app will log the bypass.",
             "Use bypass", "Cancel");

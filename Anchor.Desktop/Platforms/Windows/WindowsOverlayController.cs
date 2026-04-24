@@ -4,7 +4,7 @@ using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 
-namespace Anchor.Desktop.Platforms.Windows;
+namespace Anchor.Desktop;
 
 /// <summary>
 /// Non-dismissible overlay on Windows via a borderless, topmost WinUI Window sized to

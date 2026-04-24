@@ -17,7 +17,8 @@ public partial class IntentionSessionPage : ContentPage
     private async void OnBegin(object? sender, EventArgs e)
     {
         var now = DateTimeOffset.Now;
-        var endAt = new DateTimeOffset(now.Date + EndTimePicker.Time, now.Offset);
+        var endTime = EndTimePicker.Time ?? DateTime.Now.AddHours(2).TimeOfDay;
+        var endAt = new DateTimeOffset(now.Date + endTime, now.Offset);
         if (endAt < now) endAt = endAt.AddDays(1);
 
         var record = new IntentionRecord(
@@ -30,7 +31,7 @@ public partial class IntentionSessionPage : ContentPage
             ExplicitCheckpoints: Array.Empty<DateTimeOffset>());
 
         await _coordinator.StartSessionAsync(record);
-        await DisplayAlert("Session active",
+        await DisplayAlertAsync("Session active",
             "Your desktop will be non-dismissibly interrupted on an ultradian schedule. Keep your phone within reach — that's how you clear the overlay.",
             "Got it");
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anchor.Mobile.Views.RegistrationWizardPage"
+             Title="Register anchor">
+    <VerticalStackLayout Padding="24" Spacing="12">
+        <Label Text="Register a personal object in a specific room" FontSize="20" />
+        <Entry x:Name="NameEntry" Placeholder="Object name (e.g. kettle, toothbrush)" />
+        <Entry x:Name="RoomEntry" Placeholder="Room (e.g. kitchen, bathroom)" />
+        <Label Text="Take three photos from slightly different angles, in the room:" />
+        <Button Text="Capture photo" Clicked="OnCapture" />
+        <Label x:Name="ShotCount" TextColor="Gray" />
+        <Button x:Name="SaveBtn" Text="Save anchor" Clicked="OnSave" IsEnabled="False" />
+    </VerticalStackLayout>
+</ContentPage>
