@@ -11,7 +11,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.1.0</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>13.3</string>
+	<string>26.0</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Anchor accepts a local-network connection from your phone to verify physical anchor challenges and dismiss the desktop overlay.</string>
 </dict>
