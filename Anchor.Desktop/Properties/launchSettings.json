@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Anchor.Desktop": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MAUI_WINDOWS_DEBUG": "1"
+      },
+      "nativeDebugging": true,
+      "hotReloadEnabled": true,
+      "ancmHostingModel": "InProcess"
+    }
+  },
+  "iisSettings": {}
+}

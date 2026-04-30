@@ -1,7 +1,8 @@
 <Solution>
-  <Project Path="Anchor.Desktop/Anchor.Desktop.csproj" />
-  <Project Path="Anchor.Mobile\Anchor.Mobile.csproj" />
+  <Project Path="Anchor.Desktop/Anchor.Desktop.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="Anchor.Mobile/Anchor.Mobile.csproj" />
   <Project Path="Anchor.Shared.Tests/Anchor.Shared.Tests.csproj" />
   <Project Path="Anchor.Shared/Anchor.Shared.csproj" />
-  <Project Path="MauiApp1/MauiApp1.csproj" />
 </Solution>

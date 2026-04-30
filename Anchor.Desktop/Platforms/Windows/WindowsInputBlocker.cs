@@ -1,7 +1,6 @@
 #if WINDOWS
 using System.Runtime.InteropServices;
-
-namespace Anchor.Desktop.Platforms.Windows;
+namespace Anchor.Desktop;
 
 /// <summary>
 /// Low-level keyboard + mouse hook that swallows events while the overlay is up.

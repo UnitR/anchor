@@ -1,8 +1,7 @@
 #if WINDOWS
 using System.Runtime.InteropServices;
 using Windows.Graphics;
-
-namespace Anchor.Desktop.Platforms.Windows;
+namespace Anchor.Desktop;
 
 internal static class WindowsDisplayInfo
 {

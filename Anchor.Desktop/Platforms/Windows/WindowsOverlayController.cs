@@ -1,5 +1,4 @@
 #if WINDOWS
-using Anchor.Desktop.Platforms.Windows;
 using Anchor.Desktop.Services;
 using Microsoft.Maui.Platform;
 using Microsoft.UI;

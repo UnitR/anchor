@@ -1,4 +1,5 @@
 using Anchor.Desktop.Services;
+using Anchor.Desktop.Views;
 using Anchor.Shared.Scheduling;
 using Anchor.Shared.Storage;
 using Microsoft.Extensions.Logging;
@@ -12,7 +13,10 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .ConfigureFonts(fonts => { fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular"); });
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
         var dbDir = Path.Combine(FileSystem.AppDataDirectory, "anchor");
         Directory.CreateDirectory(dbDir);
@@ -22,7 +26,12 @@ public static class MauiProgram
         builder.Services.AddSingleton<UltradianScheduler>();
         builder.Services.AddSingleton<LocalPairingService>();
         builder.Services.AddSingleton<ScheduleCoordinator>();
-        builder.Services.AddSingleton<IOverlayController>(sp => {
+        builder.Services.AddTransient<InteroceptionPromptPage>();
+        builder.Services.AddTransient<IntentionCheckpointPage>();
+        builder.Services.AddTransient<AnchorChallengePage>();
+
+        builder.Services.AddSingleton<IOverlayController>(sp =>
+        {
 #if MACCATALYST
             return new MacOverlayController();
 #elif WINDOWS
